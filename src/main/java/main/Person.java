@@ -6,10 +6,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
 
-    private String name;
-    private Parrot parrot;
+    private String name = "Ella";
 
+
+    /* this code does not compile because the value parrot should be INITIALIZED before.!!
     @Autowired
+    private final Parrot parrot;*/
+
+    private Parrot parrot;
     public String getName() {
         return name;
     }

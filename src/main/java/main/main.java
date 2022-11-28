@@ -33,5 +33,6 @@ public class main {
         Person p1 = context.getBean("person2",Person.class);
         System.out.println((p1.getParrot()).getName());
 
+
     }
 }
