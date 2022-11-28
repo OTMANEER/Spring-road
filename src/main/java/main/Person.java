@@ -16,6 +16,9 @@ public class Person {
     private Parrot parrot;
 
     @Autowired
+    public Person() {
+    }
+    @Autowired
     public Person(Parrot parrot) {
         this.parrot = parrot;
     }
