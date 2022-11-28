@@ -58,10 +58,10 @@ public class ProjectConfig {
 
     // we can establish the relation between Parrot and the Person as the following.
     @Bean
-    public Person person2(){
+    public Person person2(Parrot parrot){
         Person p = new Person();
         p.setName("Person2");
-        p.setParrot(parrot());
+        p.setParrot(parrot);
         return p;
     }
 }
