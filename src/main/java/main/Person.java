@@ -14,6 +14,12 @@ public class Person {
     private final Parrot parrot;*/
 
     private Parrot parrot;
+
+    @Autowired
+    public Person(Parrot parrot) {
+        this.parrot = parrot;
+    }
+
     public String getName() {
         return name;
     }
