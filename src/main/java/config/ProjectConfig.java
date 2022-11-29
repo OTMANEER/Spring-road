@@ -1,18 +1,22 @@
+/*
 package config;
 
 import main.trashed.Parrot;
-import main.trashed.Person;
+import main.trashed.Person;*/
+/*
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
+*//*
 
 @Configuration
 @ComponentScan(basePackages = "main")
 public class ProjectConfig {
-    /*
+    */
+/*
     @Bean
     @Primary
     Parrot parrot(){
@@ -45,6 +49,8 @@ public class ProjectConfig {
         return 10;
     }
 *//*
+*/
+/*
     @Bean
     public Parrot parrot(){
         Parrot p = new Parrot();
@@ -65,13 +71,16 @@ public class ProjectConfig {
         p.setName("Person1");
         p.setParrot(parrot);
         return p;
-    }*/
-    /*@Bean
+    }*//*
+
+    */
+/*@Bean
     public Parrot parrot1() {
         Parrot p = new Parrot();
         p.setName("Koko");
         return p;
-    }*/
+    }*//*
+
     @Bean
     public Parrot parrot1() {
         Parrot p = new Parrot();
@@ -94,3 +103,4 @@ public class ProjectConfig {
         return p;
     }
 }
+*/
