@@ -66,10 +66,16 @@ public class ProjectConfig {
         p.setParrot(parrot);
         return p;
     }*/
-    @Bean
+    /*@Bean
     public Parrot parrot1() {
         Parrot p = new Parrot();
         p.setName("Koko");
+        return p;
+    }*/
+    @Bean
+    public Parrot parrot1() {
+        Parrot p = new Parrot();
+        p.setName("KOKO");
         return p;
     }
     @Bean

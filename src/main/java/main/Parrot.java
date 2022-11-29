@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Component
 public class Parrot {
     private Person person;
     private String name;
@@ -15,9 +14,11 @@ public class Parrot {
     }
 
     public Parrot() {
+        System.out.println("Parrot Created");
     }
 
     public Parrot(Person person) {
+        System.out.println("Parrot created");
         this.person = person;
     }
 

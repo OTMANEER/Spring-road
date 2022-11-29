@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-    private String name;
+    private String name = "Ella";
+    private Parrot parrot;
 
     public void setName(String name) {
         this.name = name;
@@ -20,8 +21,8 @@ public class Person {
         this.parrot = parrot;
     }
 
-    private Parrot parrot;
     public Person(Parrot parrot) {
+        System.out.println("Person Created");
         this.parrot = parrot;
     }
 
@@ -30,5 +31,6 @@ public class Person {
     }
 
     public Person() {
+        System.out.println("Person is created");
     }
 }
