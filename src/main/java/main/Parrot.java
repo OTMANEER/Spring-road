@@ -1,37 +1,36 @@
 package main;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
 public class Parrot {
+    private Person person;
     private String name;
 
-    public Parrot() {
-        System.out.println("New Parrot created");
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "Parrot{" +
-                "name='" + name + '\'' +
-                '}';
+    public Parrot() {
     }
 
-    @PostConstruct
-    public int ten(){
-        return 10;
+    public Parrot(Person person) {
+        this.person = person;
+    }
+
+    public Person getPerson() {
+        return person;
     }
 
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setPerson(Person p){
+        person = p;
+    }
 }
-

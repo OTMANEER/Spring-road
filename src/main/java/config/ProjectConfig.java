@@ -44,15 +44,16 @@ public class ProjectConfig {
         return 10;
     }
 */
+    @Bean
     public Parrot parrot(){
         Parrot p = new Parrot();
-        p.setName("Parrota");
+        p.setName("Parrot1");
         return p;
     }
     @Bean
-    public Person person(){
-        Person p = new Person();
-        p.setName("Person1");
+    public Parrot parrot2(){
+        Parrot p = new Parrot();
+        p.setName("Parrot2");
         return p;
     }
 
@@ -60,7 +61,7 @@ public class ProjectConfig {
     @Bean
     public Person person2(Parrot parrot){
         Person p = new Person();
-        p.setName("Person2");
+        p.setName("Person1");
         p.setParrot(parrot);
         return p;
     }
