@@ -1,10 +1,8 @@
-package main;
+package main.trashed;
 
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
-
-import java.util.function.Supplier;
 
 public class main {
     public static void main(String[] args) {

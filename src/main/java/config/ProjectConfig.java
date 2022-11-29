@@ -1,7 +1,7 @@
 package config;
 
-import main.Parrot;
-import main.Person;
+import main.trashed.Parrot;
+import main.trashed.Person;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

@@ -1,9 +1,7 @@
-package main;
+package main.trashed;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 
 public class Parrot {
     private Person person;

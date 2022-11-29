@@ -1,4 +1,4 @@
-package main;
+package main.trashed;
 
 public class DeliveryDetailsPrinter {
     private Sorter sorter;
