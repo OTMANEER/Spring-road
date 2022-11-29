@@ -30,8 +30,10 @@ public class main {
         // Chapter 3 => Wiring.
         // Wiring and auto Wiring in Spring.
 
-        Person p1 = context.getBean("person2",Person.class);
-        System.out.println((p1.getParrot()).getName());
+        Person p1 = context.getBean("person",Person.class);
+        System.out.println("Person Name: "+p1.getName());
+        System.out.println("person parrot name:"+(p1.getParrot()).getName());
+
 
 
     }
