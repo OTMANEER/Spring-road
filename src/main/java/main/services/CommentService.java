@@ -12,14 +12,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommentService {
-    private final CommentNotificationProxy commentNotificationProxy;
-    private final CommentRepository commentRepository;
+    private  CommentNotificationProxy commentNotificationProxy;
+    private  CommentRepository commentRepository;
 
 
     @Autowired   // This Annotation is Optional because the Class contains only one Constructor
     public CommentService( CommentRepository commentRepository,@Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy) {
         this.commentNotificationProxy = commentNotificationProxy;
         this.commentRepository = commentRepository;
+    }
+
+    public CommentService(){
+
     }
 
     public void publishComment(Comment comment){

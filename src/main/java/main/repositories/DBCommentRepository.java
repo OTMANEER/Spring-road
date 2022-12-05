@@ -17,4 +17,5 @@ public class DBCommentRepository implements CommentRepository{
         System.out.println("Storing Comment: "+comment.getText());
     }
 
+
 }
