@@ -14,7 +14,7 @@ public class Main {
 
         DBCommentRepository dbCommentRepository = new DBCommentRepository();
         EmailCommentNotificationProxy emailCommentNotificationProxy = new EmailCommentNotificationProxy();
-        CommentService commentService =  new CommentService(emailCommentNotificationProxy,dbCommentRepository);
+        CommentService commentService =  new CommentService(dbCommentRepository,emailCommentNotificationProxy);
         commentService.publishComment(comment);
     }
 }

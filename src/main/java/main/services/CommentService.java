@@ -4,18 +4,20 @@ import main.model.Comment;
 import main.proxies.CommentNotificationProxy;
 import main.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-@ComponentScan("main")
+
+@Service
 public class CommentService {
     private final CommentNotificationProxy commentNotificationProxy;
     private final CommentRepository commentRepository;
 
 
     @Autowired   // This Annotation is Optional because the Class contains only one Constructor
-    public CommentService(CommentNotificationProxy commentNotificationProxy, CommentRepository commentRepository) {
+    public CommentService( CommentRepository commentRepository,@Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy) {
         this.commentNotificationProxy = commentNotificationProxy;
         this.commentRepository = commentRepository;
     }
