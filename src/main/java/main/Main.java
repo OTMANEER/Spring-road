@@ -1,9 +1,6 @@
 package main;
 
 import config.ProjectConfig;
-import main.model.Comment;
-import main.proxies.EmailCommentNotificationProxy;
-import main.repositories.DBCommentRepository;
 import main.services.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,7 +10,6 @@ public class Main {
         /*Comment comment = new Comment();
         comment.setAuthor("OTMANE ERRAGRAGUI");
         comment.setText(" Work in progress");
-
         DBCommentRepository dbCommentRepository = new DBCommentRepository();
         EmailCommentNotificationProxy emailCommentNotificationProxy = new EmailCommentNotificationProxy();
         CommentService commentService =  new CommentService(dbCommentRepository,emailCommentNotificationProxy);
