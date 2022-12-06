@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
+
         /*Comment comment = new Comment();
         comment.setAuthor("OTMANE ERRAGRAGUI");
         comment.setText(" Work in progress");
@@ -17,10 +18,11 @@ public class Main {
         commentService.publishComment(comment);*/
 
                 AnnotationConfigApplicationContext c = new AnnotationConfigApplicationContext(ProjectConfig.class);
-                CommentService cs1 = c.getBean(CommentService.class);
+                /*CommentService cs1 = c.getBean(CommentService.class);
                 UserService cs2 = c.getBean(UserService.class);
                 boolean b1 = cs1.getCommentRepository() == cs2.getCommentRepository();
+                // Same Comment repo in both of them.
                 System.out.println(b1);
-            }
+*/            }
 
     }

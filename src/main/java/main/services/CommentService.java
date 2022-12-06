@@ -5,11 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
+
+/*
+* Changing Field Injection by Constructor Injection
+* */
+
 @Service
 public class CommentService {
-    @Autowired
+    public CommentService(){
+        System.out.println("Comment service created");
+    }
+    public CommentService(CommentRepository commentRepository){
+        this.commentRepository = commentRepository;
+    }
     private CommentRepository commentRepository;
-
     public  CommentRepository getCommentRepository(){
         return commentRepository;
     }
