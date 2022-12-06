@@ -19,6 +19,7 @@ public class CommentService {
     public CommentService(CommentRepository commentRepository){
         this.commentRepository = commentRepository;
     }
+    @Autowired
     private CommentRepository commentRepository;
     public  CommentRepository getCommentRepository(){
         return commentRepository;
