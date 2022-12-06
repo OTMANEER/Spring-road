@@ -2,6 +2,7 @@ package main.services;
 
 import main.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 * */
 
 @Service
+@Lazy
 public class CommentService {
     public CommentService(){
         System.out.println("Comment service created");
