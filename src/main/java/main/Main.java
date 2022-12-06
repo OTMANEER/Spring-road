@@ -2,6 +2,7 @@ package main;
 
 import config.ProjectConfig;
 import main.services.CommentService;
+import main.services.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -16,9 +17,9 @@ public class Main {
         commentService.publishComment(comment);*/
 
                 AnnotationConfigApplicationContext c = new AnnotationConfigApplicationContext(ProjectConfig.class);
-                CommentService cs1 = c.getBean("commentService", CommentService.class);
-                CommentService cs2 = c.getBean("commentService", CommentService.class);
-                boolean b1 = cs1 == cs2;
+                CommentService cs1 = c.getBean(CommentService.class);
+                UserService cs2 = c.getBean(UserService.class);
+                boolean b1 = cs1.getCommentRepository() == cs2.getCommentRepository();
                 System.out.println(b1);
             }
 

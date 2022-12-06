@@ -1,7 +1,5 @@
 package main.services;
 
-import main.model.Comment;
-import main.proxies.CommentNotificationProxy;
 import main.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

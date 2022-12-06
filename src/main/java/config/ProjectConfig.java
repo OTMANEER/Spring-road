@@ -1,17 +1,11 @@
 package config;
-
-import main.services.CommentService;
-import org.springframework.context.annotation.Bean;
+import main.*;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-
+@ComponentScan(basePackages = {"main.services","main.repositories"})
 public class ProjectConfig{
-
-    @Bean
-    public CommentService commentService(){
-        return  new CommentService();
-    }
 }
 /*
 package config;
@@ -33,6 +27,7 @@ public class ProjectConfig {
     */
 /*
     @Bean
+
     @Primary
     Parrot parrot(){
         Parrot p = new Parrot();
