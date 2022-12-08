@@ -3,7 +3,6 @@ package main;
 import config.ProjectConfig;
 import main.model.Comment;
 import main.services.CommentService;
-import main.services.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.logging.Logger;
