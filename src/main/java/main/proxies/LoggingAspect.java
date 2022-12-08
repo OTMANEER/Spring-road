@@ -7,8 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 
 @Aspect
 public class LoggingAspect {
-
-    @Around("execution(* services.*.*(..))")
+   @Around("execution(* services.*.*(..))")
     public void log(ProceedingJoinPoint proceedingJoinPoint){
         try {
             proceedingJoinPoint.proceed();
