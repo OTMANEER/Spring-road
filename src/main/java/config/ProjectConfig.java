@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Scope;
 @ComponentScan(basePackages = {"main.services","main.repositories"})
 public class ProjectConfig{
     @Bean
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+    //@Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public CommentService commentService(){
         return  new CommentService();
     }
