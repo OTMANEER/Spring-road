@@ -18,10 +18,11 @@ public class Main {
         commentService.publishComment(comment);*/
 
                 AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(ProjectConfig.class);
-                CommentService cs1 = context.getBean("commentService",CommentService.class);
-                CommentService cs2 = context.getBean("commentService",CommentService.class);
+                CommentService cs1 = context.getBean(CommentService.class);
+                UserService cs2 = context.getBean(UserService.class);
                 // Same Comment repo in both of them.
-                System.out.println(cs1 == cs2   );
+                boolean b = cs1.getCommentRepository() == cs2.getCommentRepository();
+                System.out.println(b);
         /*System.out.println("Now lets call the instance of CommentService");
         CommentService c = context.getBean(CommentService.class);
 */
