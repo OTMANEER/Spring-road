@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.util.logging.Logger;
+
 
 
 /*
@@ -15,24 +17,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommentService {
-    public CommentService(){
-        System.out.println("Comment service created");
-    }
-    public CommentService(CommentRepository commentRepository){
-        this.commentRepository = commentRepository;
-    }
-    @Autowired
-    private CommentRepository commentRepository;
-    public  CommentRepository getCommentRepository(){
-        return commentRepository;
-    }
-
-    public void sendComment(Comment comment){
-        CommentProcessor commentProcessor =  new CommentProcessor();
-        commentProcessor.setComment(comment);
-        commentProcessor.processComment(comment);
-        commentProcessor.valideComment(comment);
-        Comment comment1 = commentProcessor.getComment();
-    }
-
+        private Logger logger = Logger.getLogger(CommentService.class.getName());
+        public void publishComment(Comment comment){
+            logger.info(" Published Comment : "+comment.getText());
+        }
 }
