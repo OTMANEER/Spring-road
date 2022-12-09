@@ -2,7 +2,6 @@ package main;
 
 import config.ProjectConfig;
 import main.model.Comment;
-import main.proxies.LoggingAspect;
 import main.services.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,7 +16,8 @@ public class Main {
         Comment comment = new Comment();
         comment.setText("Demo comment");
         comment.setAuthor("Natasha");
-        String value = service.publishComment(comment);
-        logger.info(value);
+       // String value = service.publishComment(comment);
+       service.publishComment(comment);
+       // logger.info(value);
     }
 }
