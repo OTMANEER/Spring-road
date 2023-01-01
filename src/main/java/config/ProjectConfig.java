@@ -7,4 +7,5 @@ import org.springframework.context.annotation.*;
 @ComponentScan(basePackages = {"main.services"})
 @EnableAspectJAutoProxy
 public class ProjectConfig{
+
 }
